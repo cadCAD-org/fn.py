@@ -12,6 +12,11 @@ from itertools import (islice,
                        dropwhile,
                        combinations)
 
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
+
 from .op import flip
 from .func import F
 from .uniform import *
